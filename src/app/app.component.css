@@ -1,0 +1,39 @@
+/* Paleta de colores:
+    #ccd5ae
+    #e9edc9
+    #fefae0
+    #faedcd
+    #d4a373
+*/
+
+.Project {
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+
+    header {
+        background-color: #ccd5ae;
+        padding: 20px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    nav {
+        background-color: #e9edc9;
+        padding: 20px;
+    }
+
+    /* main {
+        height: 100vh;
+        width: 100vw;;
+        background-color: #fefae0;
+    } */
+
+    footer {
+        background-color: #d4a373;
+        padding: 20px;
+    }
+
+}
