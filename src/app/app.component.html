@@ -3,34 +3,32 @@
     <span>Mi Portafolio</span>
   </header>
   <nav>
-      <button mat-button routerLink="/recipies">Recetas</button>
       <button mat-button routerLink="/home">Home</button>
+      <button mat-button routerLink="/recipies">Recetas</button>
   </nav>
   <main>
     <router-outlet />
   </main>
   <footer>
-    <span>
-      Sobre Mí
-      ¡Hola y bienvenido a mi portafolio personal! Mi nombre es Diego Andrés Badillo Gómez y soy un Ingeniero de Computadores especializado en el desarrollo Front-End usando Angular como Framework, apasionado por el desarrollo de software y videojuegos. En este espacio, comparto mi trabajo, proyectos y experiencias profesionales. Mi objetivo es crear experiencias digitales impactantes y funcionales que cautiven a la audiencia.
+    <div class="footer">
+      <diV class="about-us">
+        <label>{{aboutUsLabel}}</label>
+        <p>algo</p>
+        <span>{{phone}}</span>
+        <span>{{email}}</span>
+      </diV>
 
-      Contáctame
-      Si estás interesado en colaborar en proyectos, tienes alguna pregunta o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Estoy disponible a través de correo electrónico en [Tu Correo Electrónico] y también puedes encontrarme en mis redes sociales: [Enlaces a tus perfiles de redes sociales].
+      <div class="lates-projects">
+        <label>Latest Projects</label>
+        <span>Algo</span>
+      </div>
 
-      Explora Más
-      Echa un vistazo a otras secciones de mi portafolio para descubrir más sobre mi trabajo y experiencia profesional:
-      - Proyectos: Descubre los proyectos en los que he trabajado y explora mi proceso de diseño y desarrollo.
-      - Servicios: Conoce los servicios que ofrezco y cómo puedo ayudarte a alcanzar tus objetivos digitales.
-      - Blog: Lee mis artículos y publicaciones sobre diseño, desarrollo web y otras temáticas relacionadas.
+      <div class="social-media">
+        <label>Social Media</label>
+        <span href="https://www.linkedin.com/in/diego-andres-b-b21405123/">LinkedIn</span>
+        <span href="https://github.com/DiegoABGomez">Git Hub</span>
 
-      Aviso Legal
-      El contenido de este sitio web, incluyendo textos, imágenes y diseños, está protegido por derechos de autor y es propiedad exclusiva de [Tu Nombre o Nombre de tu Marca]. Queda prohibida la reproducción total o parcial del contenido sin autorización previa por escrito.
-
-      Política de Privacidad
-      Me comprometo a proteger tu privacidad y a garantizar la seguridad de tus datos personales. Para obtener más información sobre cómo manejo y protejo tus datos, consulta mi Política de Privacidad.
-
-      ¡Gracias por visitar mi portafolio! Espero que disfrutes explorando mi trabajo y que podamos colaborar juntos en el futuro.
-
-    </span>
+      </div>
+    </div>
   </footer>
 </div>

@@ -8,7 +8,7 @@
 
 .Project {
     height: 100vh;
-    width: fit-content;
+    width: 100wh;
     font-family: sans-serif;
 
     header {
@@ -39,6 +39,16 @@
     footer {
         background-color: #d4a373;
         padding: 20px;
+        
+        .footer {
+            display: flex;
+            flex-direction: row;
+
+            .about-us, .lates-projects,
+            .social-media {
+                padding: 10px;
+            }
+        }
     }
 
 }

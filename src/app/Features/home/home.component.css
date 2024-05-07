@@ -1,0 +1,19 @@
+.main-content {
+    height: 85vh;
+    width: auto;
+    background-image: url("./../../../assets/images/homePage_3.jpg");
+    background-size: cover;
+    background-clip: border-box;
+    background-color: #faedcd;
+    display: flex;
+    
+    .intro-content {
+        max-width: 800px;
+        margin-top: 5%;
+        margin-left: 40px;
+
+        .my-intro {
+            color: white;
+        }
+    }
+}
