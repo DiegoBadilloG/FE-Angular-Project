@@ -1,1 +1,55 @@
-<p>recipies works!</p>
+<div class="content">
+    <mat-card class="recipe">
+        <mat-card-header class="recipe-header">
+            <div class="recipe-name">
+                <span>{{recipeName}}</span>
+            </div>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+        
+        <mat-card-content class="recipe-short-desc">
+            <div class="img-container">
+                <img class="recipe-img" mat-card-image [src]="recipeImg">
+            </div>
+            <div>
+                <p class="recipe-desc" [innerHtml]="formatText(descr)">{{descr}}</p>
+            </div>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content class="recipe-steps">
+            <div class="Ingedients">
+                <span class="title">{{ingedientsLabel}}</span>
+                <p [innerHtml]="formatText(ingridients)">{{ingridients}}</p>
+            </div>
+
+            <mat-divider [vertical]="true"></mat-divider>
+
+            <div class="steps">
+                <span class="title">{{stepsLabe}}</span>
+                <p>{{steps}}</p>
+            </div>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-footer class="recipe-footer">
+            <mat-card-actions>
+                <button mat-button>Compartir</button>
+                <button mat-button id="liked-button" (click)="itemLiked()" [ngClass]="{ 'button-liked': isLiked }">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-button (click)="prevItem()">
+                    Prev.
+                    <mat-icon>skip_previous</mat-icon>
+                </button>
+                <button mat-button (click)="nextItem()">
+                    Sig.
+                    <mat-icon>skip_next</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card-footer>
+    </mat-card>
+</div>

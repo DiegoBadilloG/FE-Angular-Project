@@ -5,4 +5,5 @@ import { HomeComponent } from './Features/home/home.component';
 export const routes: Routes = [
     { path: "recipies", component: RecipiesComponent},
     { path: "home", component: HomeComponent},
+    { path: "", redirectTo: "/home", pathMatch: "full"}
 ];
