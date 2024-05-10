@@ -119,3 +119,7 @@ export class QuizComponent {
   }
 
 }
+/* Para mejorar el quiz, se puede añadir un boton al inicio para
+ que el usuario añada sus propia pregntas y haya mas variedad.
+ De esta forma no hay que mirar el codigo y añadirlo manualmente en el fichero
+ de datos*/
