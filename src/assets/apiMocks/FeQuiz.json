@@ -1,0 +1,76 @@
+{
+    "quiz": [
+        {
+            "id": 1,
+            "question": "¿Cuál de las siguientes opciones es la forma correcta de declarar una variable en JavaScript?",
+            "answer": {
+                "a": "var x = 10;",
+                "b": "let x = 10;",
+                "c": "const x = 10;",
+                "d": "Todas las anteriores"
+            },
+            "correct": "d",
+            "reason": "En JavaScript, puedes declarar una variable utilizando las palabras clave var, let o const. Todas estas opciones son válidas y tienen diferentes alcances y comportamientos. var se utilizaba antes de la introducción de let y const, let permite declarar variables con un alcance de bloque y reasignar su valor, y const declara una variable con un valor constante que no puede ser reasignado. Por lo tanto, todas las opciones son formas válidas de declarar una variable en JavaScript."
+        },
+        {
+            "id": 2,
+            "question": "¿Cuál de las siguientes opciones describe correctamente el uso de la función setTimeout en JavaScript?",
+            "answer": {
+                "a": "setTimeout se utiliza para ejecutar una función después de un intervalo de tiempo específico.",
+                "b": "setTimeout se utiliza para ejecutar una función de forma repetida en un intervalo de tiempo específico.",
+                "c": "setTimeout se utiliza para detener la ejecución de una función después de un intervalo de tiempo específico.",
+                "d": "setTimeout se utiliza para declarar una variable con un valor constante."
+            },
+            "correct": "a",
+            "reason": "La función setTimeout en JavaScript se utiliza para ejecutar una función después de un cierto intervalo de tiempo (en milisegundos). La sintaxis básica es setTimeout(función, tiempo), donde función es la función que se ejecutará después del tiempo especificado. Por lo tanto, la opción a) describe correctamente el uso de setTimeout."
+        },
+        {
+            "id": 3,
+            "question": "¿Cuál de las siguientes afirmaciones sobre los eventos en JavaScript es verdadera?",
+            "answer": {
+                "a": "Los eventos en JavaScript solo pueden ser manejados utilizando el atributo onclick en las etiquetas HTML.",
+                "b": "Los eventos en JavaScript son acciones que ocurren en la página web, como hacer clic en un botón o mover el mouse.",
+                "c":" Los eventos en JavaScript solo pueden ser capturados por funciones declaradas dentro del archivo JavaScript principal.",
+                "d": "Los eventos en JavaScript solo pueden ser manejados utilizando jQuery y no son parte del lenguaje JavaScript."
+            },
+            "correct": "b",
+            "reason": "Los eventos en JavaScript son acciones que ocurren en la página web, como hacer clic en un botón, mover el mouse, escribir en un campo de entrada, etc. Estos eventos pueden ser manejados mediante código JavaScript utilizando diferentes métodos y técnicas, como la asignación de manejadores de eventos con el atributo onclick, la escucha de eventos con métodos como addEventListener, o el uso de bibliotecas como jQuery. La afirmación a) es incorrecta, ya que los eventos pueden ser manejados de varias maneras, no solo con el atributo onclick. Las afirmaciones c) y d) son incorrectas ya que no existen restricciones sobre dónde se pueden declarar las funciones de manejo de eventos en JavaScript, y los eventos son parte integral del lenguaje JavaScript, no exclusivos de una biblioteca como jQuery."
+        },
+        {
+            "id": 4,
+            "question": "¿Cuál es la forma correcta de definir una lista desordenada en HTML?",
+            "answer": {
+                "a": "<list>",
+                "b": "<ul>",
+                "c": "<ol>",
+                "d": "<dl>"
+            },
+            "correct": "b",
+            "reason": "En HTML, la etiqueta <ul> se utiliza para crear una lista desordenada. Las listas desordenadas se utilizan para representar elementos que no tienen un orden específico, como una lista de elementos de navegación o de ítems. La etiqueta <list> (opción a) no es una etiqueta HTML válida para crear listas desordenadas. Las etiquetas <ol> (opción c) y <dl> (opción d) se utilizan para crear listas ordenadas y listas de definición, respectivamente."
+        },
+        {
+            "id": 5,
+            "question": "¿Cuál es la forma correcta de definir un enlace en HTML?",
+            "answer": {
+                "a": "<link>",
+                "b": "<a>",
+                "c": "<href>",
+                "d": "<anchor>"
+            },
+            "correct": "b",
+            "reason": "En HTML, la etiqueta <a> se utiliza para crear un enlace o hipervínculo. La sintaxis básica para un enlace es <a href=\"URL\">Texto del enlace</a>, donde href es el atributo que especifica la URL a la que el enlace apunta. La opción a) <link> se utiliza para enlazar recursos externos, como hojas de estilo CSS o iconos de favicon. La opción c) <href> no es una etiqueta HTML válida; href es un atributo utilizado dentro de la etiqueta <a> para especificar la URL de destino del enlace. La opción d) <anchor> no es una etiqueta HTML válida para crear enlaces; <a> es la etiqueta correcta para este propósito."
+        },
+        {
+            "id": 6,
+            "question": "¿Cuál es la forma correcta de aplicar un color de fondo a un elemento en CSS?",
+            "answer": {
+                "a": "background-color: blue;",
+                "b": "color: blue;",
+                "c": "background: blue;",
+                "d": "bgcolor: blue;"
+            },
+            "correct": "a",
+            "reason": "En CSS, la propiedad background-color se utiliza para establecer el color de fondo de un elemento. Por lo tanto, la opción a) es la forma correcta de aplicar un color de fondo azul a un elemento en CSS. La opción b) establece el color del texto, no el color de fondo. La opción c) es una forma abreviada de aplicar varios estilos de fondo, pero en este caso, solo se establecerá el color de fondo. La opción d) es incorrecta, ya que bgcolor no es una propiedad válida en CSS para establecer el color de fondo."
+        }
+    ]
+}
