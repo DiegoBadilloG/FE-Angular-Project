@@ -1,0 +1,7 @@
+.content {
+    height: 85vh;
+    width: auto;
+    background-color:  #faedcd;
+    display: flex;
+    justify-content: center;
+}
