@@ -93,6 +93,14 @@ export class QuizComponent {
       elem?.classList.add("correct");
       this.nextQuestion = true;
       this.disabledButton = true
+
+      if (this.progressBar < 100) {
+        this.progressBar += this.bufferValue * 10;
+  
+        if (this.progressBar >= 100) {
+          this.quizCompleted = true;
+        }
+      }
     } else {
       elem?.classList.add("incorrect");
     }
@@ -100,14 +108,6 @@ export class QuizComponent {
 
   changeQuestion() {
     this.nextQuestion = false;
-    
-    if (this.progressBar < 100) {
-      this.progressBar += this.bufferValue * 10;
-
-      if (this.progressBar >= 100) {
-        this.quizCompleted = true;
-      }
-    }
 
     let elem = document.querySelectorAll('button');
     elem.forEach((el) => {
