@@ -1,6 +1,14 @@
 # FeProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+The porpouse of this project is test and improve the front end skills developing small components based on the challenges propoused by FRONTEND MENTOR (https://www.frontendmentor.io/challenges).
+The current activities carried out are:
+  Introductory Page
+  Recipie Page
+  FAQ's page
+  Front End Quiz
+
+Note that this project also use Anguilar Material and all the http request are mocked using the files under ApiMocks 
 
 ## Development server
 
