@@ -3,7 +3,7 @@ import { RecipiesComponent } from './Features/recipies/recipies.component';
 import { HomeComponent } from './Features/home/home.component';
 import { FaqComponent } from './Features/faq/faq.component';
 import { QuizComponent } from './Features/quiz/quiz.component';
-import { PwdManaggerComponent } from './pwd-managger/pwd-managger.component';
+import { PwdManaggerComponent } from './Features/pwd-managger/pwd-managger.component';
 
 export const routes: Routes = [
     { path: "recipies", component: RecipiesComponent},

@@ -34,7 +34,6 @@ export class PwdManaggerComponent {
   constructor(private httpService: HttpClient) {
     this.data = this.httpService.get(this.url)
       .subscribe((data: any) => {
-        console.log(data);
         this.rawData = data;
         this.appsList = this.rawData.pwdManager;
         this.appsList.forEach((elem: any) => {
@@ -45,7 +44,6 @@ export class PwdManaggerComponent {
 
   togglePwdVisibility(app: any) {
     app.showPwd = !app.showPwd;
-    console.log(app);
   }
 
   generateNewPwd() {
@@ -60,7 +58,6 @@ export class PwdManaggerComponent {
 
   saveNewPwd() {
     this.newAppName = (document.getElementById('newAppName') as HTMLInputElement).value; 
-    console.log(this.newAppName);
     if(this.newAppName &&  this.newPwd) {
       let newApp = {
         appname: this.newAppName,
@@ -68,7 +65,6 @@ export class PwdManaggerComponent {
       }
       this.copyRawData = _.cloneDeep(this.rawData);
       this.rawData.pwdManager.push(newApp);
-      console.log("datos: ",this.rawData);
 
       this.httpService.post(this.url, this.rawData);
       this.resetFrom();
