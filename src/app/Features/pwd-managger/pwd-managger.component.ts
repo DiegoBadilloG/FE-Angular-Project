@@ -39,7 +39,16 @@ export class PwdManaggerComponent {
         this.appsList.forEach((elem: any) => {
           elem.showPwd = false;
         });
+      }
+    );
+
+    document.addEventListener('DOMContentLoaded', (event: any) => {
+      const input = document.getElementById('newAppName') as HTMLInputElement;
+      input?.addEventListener('input', () => {
+        this.newAppName = input.value;
       })
+
+    })
   }
 
   togglePwdVisibility(app: any) {
@@ -57,7 +66,6 @@ export class PwdManaggerComponent {
   }
 
   saveNewPwd() {
-    this.newAppName = (document.getElementById('newAppName') as HTMLInputElement).value; 
     if(this.newAppName &&  this.newPwd) {
       let newApp = {
         appname: this.newAppName,
