@@ -48,14 +48,14 @@ export class FaqComponent {
   +' específicos sobre salarios y beneficios en función de las responsabilidades y el alcance del puesto ofrecido.'
 
   faq7: string = '¿Cuál ha sido tu experiencia previa como desarrollador front-end?';
-  faq7_anw: string = 'Antes de mi actual posición como desarrollador front-end en una '
+  faq7_anw: string = 'Antes de mi posición como desarrollador front-end en una '
   +'empresa de telecomunicaciones, tuve la oportunidad de realizar prácticas curriculares '+
   'donde aprender a traves de proyectos web reales. Además, mi formación en ingeniería de '
   +'computadores me proporcionó una sólida base técnica para mi transición al desarrollo front-end.'
 
   faq8: string ='¿Has trabajado en proyectos independientes o freelance como desarrollador front-end?';
-  faq8_anw: string = 'Sí, he tenido la oportunidad de trabajar en proyectos independientes y freelance '
-  +'como desarrollador front-end. Estas experiencias me han permitido trabajar en una variedad de proyectos, '+
+  faq8_anw: string = 'Sí, he tenido la oportunidad de trabajar en proyectos independientes '
+  +'como desarrollador front-end pero no como freelance. Estas experiencias me han permitido trabajar en una variedad de proyectos, '+
   'desde la creación de sitios web personalizados hasta la optimización de la experiencia de usuario para aplicaciones existentes.'
 
   faq9: string = '¿Qué tipo de proyectos front-end estás buscando actualmente?';
