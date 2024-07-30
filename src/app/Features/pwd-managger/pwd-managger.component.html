@@ -34,7 +34,7 @@
                 <span *ngIf="newPwd" class="newPassword">{{newPwd}}</span>
             </div>
             <div class="save">
-                <button mat-button [disabled]="!newAppName || !newPwd" (click)="saveNewPwd()" >Save</button>
+                <button mat-button [disabled]="disabledSaveBtn" (click)="saveNewPwd()" >Save</button>
             </div>
         </mat-card-content>
     </mat-card>

@@ -29,6 +29,7 @@ export class PwdManaggerComponent {
   url: string = '/api/pwd-manager.json';
   newAppName: string = "";
   newPwd: string = "";
+  disabledSaveBtn: boolean = true;
   
 
   constructor(private httpService: HttpClient) {
@@ -46,9 +47,10 @@ export class PwdManaggerComponent {
       const input = document.getElementById('newAppName') as HTMLInputElement;
       input?.addEventListener('input', () => {
         this.newAppName = input.value;
+        this._toggleSave();
       })
       //con angular seria en el html: [(ngModel)] = "newAppName"
-    })
+    });
   }
 
   togglePwdVisibility(app: any) {
@@ -63,6 +65,7 @@ export class PwdManaggerComponent {
     }
 
     this.newPwd = result;
+    this._toggleSave();
   }
 
   saveNewPwd() {
@@ -76,6 +79,7 @@ export class PwdManaggerComponent {
 
       this.httpService.post(this.url, this.rawData);
       this.resetFrom();
+      this.disabledSaveBtn = true;
     }
   }
 
@@ -83,5 +87,10 @@ export class PwdManaggerComponent {
     this.newAppName = "";
     this.newPwd = "";
     (document.getElementById('newAppName') as HTMLInputElement).value = "";
+  }
+
+  _toggleSave() {
+    const isValid = this.newAppName.trim() !== "" && this.newPwd.trim() !== "";
+    this.disabledSaveBtn = !isValid;
   }
 }
