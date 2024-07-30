@@ -47,7 +47,7 @@ export class PwdManaggerComponent {
       input?.addEventListener('input', () => {
         this.newAppName = input.value;
       })
-
+      //con angular seria en el html: [(ngModel)] = "newAppName"
     })
   }
 

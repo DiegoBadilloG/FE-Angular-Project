@@ -44,9 +44,15 @@
             display: flex;
             flex-direction: row;
 
+            a {
+                text-decoration: none;
+            }
+
             .about-us, .lates-projects,
             .social-media {
                 padding: 10px;
+                display: flex;
+                gap: 10px;
             }
         }
     }
