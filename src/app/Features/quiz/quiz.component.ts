@@ -6,6 +6,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-quiz',
@@ -45,7 +47,7 @@ export class QuizComponent {
   opt3: boolean = false;
   opt4:  boolean = false;
 
-  constructor(private httpService: HttpClient) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private httpService: HttpClient) {
     this.httpService.get(this.quizUrl)
     .subscribe((data: any) => {
       this.rowdata = data;
@@ -73,36 +75,38 @@ export class QuizComponent {
   }
 
   selectOpt(opt: any) {
-    let elem;
-    switch(opt) {
-      case "a":
-        elem = document.getElementById('ansA');
-        break;
-      case "b":
-        elem = document.getElementById('ansB');
-        break;
-      case "c":
-        elem = document.getElementById('ansC');
-        break;
-      case "d":
-        elem = document.getElementById('ansD');
-        break;
-    }
-
-    if (opt === this.correct) {
-      elem?.classList.add("correct");
-      this.nextQuestion = true;
-      this.disabledButton = true
-
-      if (this.progressBar < 100) {
-        this.progressBar += this.bufferValue * 10;
-  
-        if (this.progressBar >= 100) {
-          this.quizCompleted = true;
-        }
+    if (isPlatformBrowser(this.platformId)) {
+      let elem;
+      switch(opt) {
+        case "a":
+          elem = document.getElementById('ansA');
+          break;
+        case "b":
+          elem = document.getElementById('ansB');
+          break;
+        case "c":
+          elem = document.getElementById('ansC');
+          break;
+        case "d":
+          elem = document.getElementById('ansD');
+          break;
       }
-    } else {
-      elem?.classList.add("incorrect");
+
+      if (opt === this.correct) {
+        elem?.classList.add("correct");
+        this.nextQuestion = true;
+        this.disabledButton = true
+
+        if (this.progressBar < 100) {
+          this.progressBar += this.bufferValue * 10;
+    
+          if (this.progressBar >= 100) {
+            this.quizCompleted = true;
+          }
+        }
+      } else {
+        elem?.classList.add("incorrect");
+      }
     }
   }
 
