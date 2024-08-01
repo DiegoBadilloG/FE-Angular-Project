@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
 import { MatButton } from '@angular/material/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import _ from 'lodash';
 
 
@@ -15,7 +16,8 @@ import _ from 'lodash';
     CommonModule,
     MatIcon,
     MatButton,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   templateUrl: './pwd-managger.component.html',
   styleUrl: './pwd-managger.component.css'
@@ -42,15 +44,6 @@ export class PwdManaggerComponent {
         });
       }
     );
-
-    document.addEventListener('DOMContentLoaded', (event: any) => {
-      const input = document.getElementById('newAppName') as HTMLInputElement;
-      input?.addEventListener('input', () => {
-        this.newAppName = input.value;
-        this._toggleSave();
-      })
-      //con angular seria en el html: [(ngModel)] = "newAppName"
-    });
   }
 
   togglePwdVisibility(app: any) {
@@ -86,7 +79,6 @@ export class PwdManaggerComponent {
   resetFrom() {
     this.newAppName = "";
     this.newPwd = "";
-    (document.getElementById('newAppName') as HTMLInputElement).value = "";
   }
 
   _toggleSave() {
