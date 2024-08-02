@@ -58,7 +58,6 @@ export class PwdManaggerComponent {
     }
 
     this.newPwd = result;
-    this._toggleSave();
   }
 
   saveNewPwd() {
@@ -79,10 +78,5 @@ export class PwdManaggerComponent {
   resetFrom() {
     this.newAppName = "";
     this.newPwd = "";
-  }
-
-  _toggleSave() {
-    const isValid = this.newAppName.trim() !== "" && this.newPwd.trim() !== "";
-    this.disabledSaveBtn = !isValid;
   }
 }
