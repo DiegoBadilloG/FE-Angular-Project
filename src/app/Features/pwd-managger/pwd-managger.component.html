@@ -27,14 +27,14 @@
         <mat-card-content class="generator-content">
             <div class="newAppName">
                 <span>App name</span>
-                <input class="inputAppName" type="text" id="newAppName">
+                <input class="inputAppName" type="text" [(ngModel)]="newAppName">
             </div>
             <div class="generatePwd">
                 <button mat-button (click)="generateNewPwd()">Generate password</button>
                 <span *ngIf="newPwd" class="newPassword">{{newPwd}}</span>
             </div>
             <div class="save">
-                <button mat-button [disabled]="disabledSaveBtn" (click)="saveNewPwd()" >Save</button>
+                <button mat-button [disabled]="!newAppName || !newPwd" (click)="saveNewPwd()" >Save</button>
             </div>
         </mat-card-content>
     </mat-card>
