@@ -3,7 +3,7 @@ import {MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
 import { MatButton } from '@angular/material/button';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import _ from 'lodash';
 
@@ -16,7 +16,6 @@ import _ from 'lodash';
     CommonModule,
     MatIcon,
     MatButton,
-    HttpClientModule,
     FormsModule
   ],
   templateUrl: './pwd-managger.component.html',
