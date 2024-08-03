@@ -1,7 +1,7 @@
 .main-content {
     height: 85vh;
     width: auto;
-    background-image: url("./../../../assets/images/homePage_3.jpg");
+    background-image: url("/src/assets/images/homePage_3.jpg");
     background-size: cover;
     background-clip: border-box;
     background-color: #faedcd;
