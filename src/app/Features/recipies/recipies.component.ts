@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { catchError } from 'rxjs';
+import { UrlBaseService } from '../../Services/url-base.service';
 
 @Component({
   selector: 'app-recipies',
@@ -23,12 +24,12 @@ import { catchError } from 'rxjs';
 export class RecipiesComponent {
   private rowData: any;
   private recipeURL: string = "";
-  private apiUrl: string = "/api/recipes.json";
-  private fullUrl: string = " https://diegobadillog.github.io/FE-Angular-Project/api/recipes.json"
+  private apiUrl: string = "/recipes.json";
   private recipesList!: any[];
   private selectedItem: any;
   private itemIndex: number = 0;
 
+  imgUrl: string = "";
   /* textos de la seccion */
   ingedientsLabel: string = "Ingredientes";
   recipeName: string = "";
@@ -40,15 +41,11 @@ export class RecipiesComponent {
 
   isLiked: boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private httService: HttpClient) {
-    this.recipeURL = isPlatformBrowser(this.platformId)? this.apiUrl : this.fullUrl;
+  constructor(private urlService: UrlBaseService, @Inject(PLATFORM_ID) private platformId: Object,private httService: HttpClient) {
+    this.recipeURL = this.urlService.getApiUrl() + this.apiUrl;
+    this.imgUrl = this.urlService.getImgUrl();
 
     this.rowData = this.httService.get(this.recipeURL)
-    .pipe(
-      catchError((error: any) => {
-        throw new Error(error);
-      })
-    )
     .subscribe((data: any) => {
       this.recipesList = data.recipes;
       this.loadItem(this.recipesList);
@@ -60,7 +57,7 @@ export class RecipiesComponent {
       this.selectedItem = data[this.itemIndex];
 
       this.recipeName = this.selectedItem.name;
-      this.recipeImg = this.selectedItem.img;
+      this.recipeImg = this.imgUrl + this.selectedItem.img;
       this.descr = this.selectedItem.description;
       this.ingridients = this.selectedItem.ingridientes;
       this.steps = this.selectedItem.pasos;

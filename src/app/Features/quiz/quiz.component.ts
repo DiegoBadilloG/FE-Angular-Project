@@ -8,7 +8,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { catchError, throwError } from 'rxjs';
+import { UrlBaseService } from '../../Services/url-base.service';
 
 @Component({
   selector: 'app-quiz',
@@ -27,9 +27,9 @@ import { catchError, throwError } from 'rxjs';
 export class QuizComponent {
   private rowdata: any;
   private quizList!: any[];
-  private apiUrl: string = "/api/FeQuiz.json"
-  private fullUrl: string = " https://diegobadillog.github.io/FE-Angular-Project/api/FeQuiz.json"
-  private quizUrl: string = ""; 
+  private apiUrl: string = "/FeQuiz.json"
+  private quizUrl: string = "";
+  imgRoute: string = "";
   start: boolean = false;
   nextQuestion: boolean = false;
   disabledButton: boolean = false;
@@ -49,15 +49,11 @@ export class QuizComponent {
   opt3: boolean = false;
   opt4:  boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private httpService: HttpClient) {
-    this.quizUrl = isPlatformBrowser(this.platformId)? this.apiUrl : this.fullUrl;
-    
+  constructor(private urlservice: UrlBaseService, @Inject(PLATFORM_ID) private platformId: Object, private httpService: HttpClient) {
+    this.quizUrl = this.urlservice.getApiUrl() + this.apiUrl;
+    this.imgRoute = this.urlservice.getImgUrl();
+
     this.httpService.get(this.quizUrl)
-    .pipe(
-      catchError((error: any) => {
-        throw new Error(error);
-      })
-    )
     .subscribe((data: any) => {
       this.rowdata = data;
       this.quizList = this.rowdata.quiz;

@@ -18,7 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class AppComponent {
   title = 'FeProject';
-  phone = "+34 663872089"
+  phone = ""
   email = "diegoabgomez@gmail.com"
   aboutUsLabel = "About us"
   aboutUsText = "Bienvenido a mi proyecto de portafolio. Este proyecto es un esfuerzo personal destinado a mejorar" +

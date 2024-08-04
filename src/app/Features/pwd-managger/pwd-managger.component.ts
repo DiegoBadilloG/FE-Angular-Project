@@ -1,12 +1,12 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component} from '@angular/core';
 import {MatCardModule } from '@angular/material/card';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
 import { MatButton } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import _ from 'lodash';
-import { catchError } from 'rxjs';
+import { UrlBaseService } from '../../Services/url-base.service';
 
 
 @Component({
@@ -28,23 +28,17 @@ export class PwdManaggerComponent {
   copyRawData: any;
   data: any;
   appsList: any
-  url: string = '/api/pwd-manager.json';
-  private apiUrl: string = "/api/pwd-manager.json";
-  private fullUrl: string = " https://diegobadillog.github.io/FE-Angular-Project/api/pwd-manager.json"
+  url: string = '';
+  private apiUrl: string = "/pwd-manager.json";
   newAppName: string = "";
   newPwd: string = "";
   disabledSaveBtn: boolean = true;
   
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private httpService: HttpClient) {
-    this.url = isPlatformBrowser(this.platformId)? this.apiUrl : this.fullUrl;
+  constructor(private urlService: UrlBaseService, private httpService: HttpClient) {
+    this.url = this.urlService.getApiUrl() + this.apiUrl;
 
     this.data = this.httpService.get(this.url)
-    .pipe(
-      catchError((error: any) => {
-        throw new Error(error);
-      })
-    )
     .subscribe((data: any) => {
       this.rawData = data;
       this.appsList = this.rawData.pwdManager;
