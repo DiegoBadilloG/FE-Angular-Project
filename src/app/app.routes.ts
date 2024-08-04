@@ -11,5 +11,6 @@ export const routes: Routes = [
     { path: "", redirectTo: "/home", pathMatch: "full"},
     { path: "faq", component: FaqComponent},
     { path: "quiz", component: QuizComponent},
-    { path: 'pwdManager', component: PwdManaggerComponent}
+    { path: 'pwdManager', component: PwdManaggerComponent},
+    {path: "**", redirectTo: "home", pathMatch: "full"}
 ];
