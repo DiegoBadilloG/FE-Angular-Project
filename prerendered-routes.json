@@ -1,9 +1,0 @@
-{
-  "routes": [
-    "/faq",
-    "/home",
-    "/pwdManager",
-    "/quiz",
-    "/recipies"
-  ]
-}
