@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { catchError } from 'rxjs';
+import { UrlBaseService } from '../../Services/url-base.service';
 
 @Component({
   selector: 'app-recipies',
@@ -21,11 +23,13 @@ import { CommonModule } from '@angular/common';
 })
 export class RecipiesComponent {
   private rowData: any;
-  private recipeURL: string = "/api/recipes.json";
+  private recipeURL: string = "";
+  private apiUrl: string = "/recipes.json";
   private recipesList!: any[];
   private selectedItem: any;
   private itemIndex: number = 0;
 
+  imgUrl: string = "";
   /* textos de la seccion */
   ingedientsLabel: string = "Ingredientes";
   recipeName: string = "";
@@ -37,12 +41,15 @@ export class RecipiesComponent {
 
   isLiked: boolean = false;
 
-  constructor(private httService: HttpClient) {
+  constructor(private urlService: UrlBaseService, @Inject(PLATFORM_ID) private platformId: Object,private httService: HttpClient) {
+    this.recipeURL = this.urlService.getApiUrl() + this.apiUrl;
+    this.imgUrl = this.urlService.getImgUrl();
+
     this.rowData = this.httService.get(this.recipeURL)
-      .subscribe((data: any) => {
-        this.recipesList = data.recipes;
-        this.loadItem(this.recipesList);
-      });
+    .subscribe((data: any) => {
+      this.recipesList = data.recipes;
+      this.loadItem(this.recipesList);
+    });
   } 
 
   loadItem(data: any) {
@@ -50,7 +57,7 @@ export class RecipiesComponent {
       this.selectedItem = data[this.itemIndex];
 
       this.recipeName = this.selectedItem.name;
-      this.recipeImg = this.selectedItem.img;
+      this.recipeImg = this.imgUrl + this.selectedItem.img;
       this.descr = this.selectedItem.description;
       this.ingridients = this.selectedItem.ingridientes;
       this.steps = this.selectedItem.pasos;

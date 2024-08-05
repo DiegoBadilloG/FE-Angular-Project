@@ -8,6 +8,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { UrlBaseService } from '../../Services/url-base.service';
 
 @Component({
   selector: 'app-quiz',
@@ -26,7 +27,9 @@ import { isPlatformBrowser } from '@angular/common';
 export class QuizComponent {
   private rowdata: any;
   private quizList!: any[];
-  private quizUrl: string = "/api/FeQuiz.json"
+  private apiUrl: string = "/FeQuiz.json"
+  private quizUrl: string = "";
+  imgRoute: string = "";
   start: boolean = false;
   nextQuestion: boolean = false;
   disabledButton: boolean = false;
@@ -46,13 +49,17 @@ export class QuizComponent {
   opt3: boolean = false;
   opt4:  boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private httpService: HttpClient) {
+  constructor(private urlservice: UrlBaseService, @Inject(PLATFORM_ID) private platformId: Object, private httpService: HttpClient) {
+    this.quizUrl = this.urlservice.getApiUrl() + this.apiUrl;
+    this.imgRoute = this.urlservice.getImgUrl();
+
     this.httpService.get(this.quizUrl)
     .subscribe((data: any) => {
       this.rowdata = data;
       this.quizList = this.rowdata.quiz;
       this.bufferValue = Math.ceil(this.quizList.length / 2)
     });
+    
   }
   startQuiz() {
     this.start = true;

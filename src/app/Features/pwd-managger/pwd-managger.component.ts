@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import {MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
@@ -6,6 +6,7 @@ import { MatButton } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import _ from 'lodash';
+import { UrlBaseService } from '../../Services/url-base.service';
 
 
 @Component({
@@ -27,22 +28,24 @@ export class PwdManaggerComponent {
   copyRawData: any;
   data: any;
   appsList: any
-  url: string = '/api/pwd-manager.json';
+  url: string = '';
+  private apiUrl: string = "/pwd-manager.json";
   newAppName: string = "";
   newPwd: string = "";
   disabledSaveBtn: boolean = true;
   
 
-  constructor(private httpService: HttpClient) {
+  constructor(private urlService: UrlBaseService, private httpService: HttpClient) {
+    this.url = this.urlService.getApiUrl() + this.apiUrl;
+
     this.data = this.httpService.get(this.url)
-      .subscribe((data: any) => {
-        this.rawData = data;
-        this.appsList = this.rawData.pwdManager;
-        this.appsList.forEach((elem: any) => {
-          elem.showPwd = false;
-        });
-      }
-    );
+    .subscribe((data: any) => {
+      this.rawData = data;
+      this.appsList = this.rawData.pwdManager;
+      this.appsList.forEach((elem: any) => {
+        elem.showPwd = false;
+      });
+    });
   }
 
   togglePwdVisibility(app: any) {
