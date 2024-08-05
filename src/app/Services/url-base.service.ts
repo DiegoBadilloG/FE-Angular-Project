@@ -13,8 +13,8 @@ export class UrlBaseService {
         //If it neeeded, change here url base on platform (server/browser)
         this.baseUrl = environment.apiBaseUrl;
         if (environment.production) {
-            this.baseApiUrl = this.baseUrl + "/browser/assets/apiMocks";
-            this.imgUrl = this.baseUrl + "/browser/assets/images";
+            this.baseApiUrl = this.baseUrl + "/assets/apiMocks";
+            this.imgUrl = this.baseUrl + "/assets/images";
         } else {
             this.baseApiUrl = this.baseUrl + "/api";
             this.imgUrl = this.baseUrl + "/assets/images";
