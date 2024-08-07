@@ -9,7 +9,6 @@
         background-color:  rgb(114, 121, 162);
         width: 100%;
         display: flex;
-        padding: 30px;
         justify-content: center;
 
         .quiz-intro {
@@ -26,8 +25,8 @@
                 align-items: center;
 
                 .logos {
-                    padding: 10px;
-                    display: flex;
+                    display: block;
+                    padding-left: 30px;
                     img {
                         width: 100px;
                         object-fit: contain;
@@ -37,9 +36,8 @@
             
 
             .start-button {
-                width: 50px;
                 background-color: yellow;
-                margin-left: 50px;
+                margin: 20px;
             }
         }
 
