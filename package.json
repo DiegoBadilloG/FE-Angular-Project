@@ -4,11 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href '/FE-Angular-Project/' && node ./scripts/renameCreate404.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:FeProject": "node dist/fe-project/server/server.mjs",
-    "produc": "ng serve --configuration production"
+    "produc": "ng serve --configuration production",
+    "deploy": "npx ngh --dir=dist/fe-project/browser"
   },
   "private": true,
   "dependencies": {
