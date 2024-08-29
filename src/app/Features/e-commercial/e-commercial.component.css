@@ -1,0 +1,165 @@
+.container {
+    height: auto;
+    width: auto;
+    background-color:  white;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    .eshop-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .main-menu {
+            display: flex;
+            gap: 5px;
+        }
+
+        .aux-menu {
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+            flex: 1;
+            justify-content: end;
+
+            .search-bar {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgb(232, 232, 232);
+                height: fit-content;
+
+                .search-input {
+                   background-color: transparent;
+                    border: none;
+                    height: 25px;
+                    outline: none;
+                }            
+            }
+            .search-bar:focus-within {
+                outline: 1px solid black;
+            } 
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            padding-top: 0px;
+            align-items: baseline;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .shoes-menu, .man-menu,
+    .woman-menu, .kid-menu,
+    .new-menu, .sport-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        width: 100%;
+        position: absolute;
+        z-index: 1000;
+        top: 13.2%;
+        background-color: white;
+        padding: 15px;
+
+        .lk-group1 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bold-links {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .main-banner {
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(90, 186, 255);
+        padding: 20px;
+
+        .carousel-img {
+            width: 100%;
+            img {
+                width: inherit;
+                height: inherit;
+                border-radius: 15px;
+            }
+
+            .banner-btn-actions {
+                display: flex;
+                gap: 10px;
+                position: relative;
+                top: -15%;
+                padding-left: 25px;
+
+                .banner-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: white;
+                    border-radius: 3px;
+                    box-shadow: 3px 3px black;
+                }
+                
+            }
+        }
+
+        .banner-info-item {
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            width: 100%;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            padding: 30px;
+        }
+    }
+
+    .showcase-area {
+        height: 600px; /* quitar */
+        background-color: beige;
+
+        .products-slider {
+            height: 300px;
+            .slider-elem {
+                .elem-img {
+                    height: inherit;
+                }
+            }
+        }
+        
+    }
+
+    button.eshop-main-btn,
+    button.banner-btn {
+        font-family: sans-serif;
+        font-size: 14px;
+        background-color: transparent;
+        border: none;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    button.eshop-main-btn:hover {
+        border-bottom: 5px solid black;
+    }
+}
