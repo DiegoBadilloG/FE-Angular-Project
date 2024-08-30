@@ -1,0 +1,80 @@
+{
+    "projects": [
+        {
+            "title": "Desarrollo de infraestructura para conexiones remotas",
+            "place": "UPM",
+            "year": "2022",
+            "description": "Se desarrolló una infraestructura para conexiones remotas que permitió establecer una red VPN privada y segura. Utilizando Kali Linux y pfSense, se configuró una red que facilitó el acceso remoto a otros equipos. El proyecto incluyó la creación de scripts en Bash para automatizar procesos de configuración y conexión, mejorando la eficiencia y la seguridad del sistema. La solución implementada fue diseñada para garantizar conexiones encriptadas y seguras, proporcionando una capa adicional de seguridad en entornos de red complejos."
+        },
+        {
+            "title": "Automatización de aulas usando FPGA’s",
+            "place": "UPM",
+            "year": "2021",
+            "description": "Se desarrolló un sistema de automatización de aulas utilizando FPGA’s con el objetivo de optimizar las condiciones de estudio controlando diversos elementos del aula. El sistema integra sensores para medir parámetros ambientales como la luz y la temperatura, permitiendo ajustar automáticamente estos valores a niveles óptimos. Se implementaron controles para regular las persianas mediante motores y se incluyeron señales a actuadores para encender o apagar la calefacción, así como para ajustar el aire acondicionado. Esta solución permitió crear un entorno de estudio cómodo y eficiente, adaptándose a las necesidades de los usuarios."
+        },
+        {
+            "title": "Sistema de gestión y medición de la huella de carbono",
+            "place":  "UPM",
+            "year": "2022",
+            "description": "Se desarrolló un sistema de gestión y medición de la huella de carbono utilizando placas ESP32, equipadas con medidores de corriente para monitorear el consumo eléctrico de los dispositivos. El sistema cuenta con sensores de movimiento que detectan cuando un aula está vacía; si se detecta consumo eléctrico durante la ausencia de personas, se apagan automáticamente todos los dispositivos conectados para evitar el consumo innecesario. Además, el sistema está integrado con Telegram para enviar notificaciones sobre las mediciones de consumo y permitir el apagado remoto de dispositivos a través de mensajes. Esta solución contribuye a reducir la huella de carbono mediante la optimización del consumo energético en espacios educativos."
+        },
+        {
+            "title": "Sistema de detección de distracciones al volante",
+            "place":  "UPM",
+            "year": "2022",
+            "description": "El objetivo del sistema es comprobar si el vehículo supera la velocidad permitida, medir la distancia de seguridad respecto a otros vehículos, y verificar si el conductor está prestando atención a la carretera, mediante el análisis de la posición de la cabeza. Para ello el  sistema incluye sensores de velocidad, infrarrojos y giroscopios, entre otros, para monitorear y evaluar el comportamiento del conductor.  Esta solución está diseñada para mejorar la seguridad al volante, reduciendo el riesgo de accidentes causados por distracciones."
+        },
+        {
+            "title": "Color Detection",
+            "place": "UPM",
+            "year": "2020",
+            "description": "A través de visión artificial, el proyecto permite nalizar imágenes y reconocer los distintos colores presentes en ellas. Mediante el uso de técnicas de procesamiento de imágenes y algoritmos de análisis de color, el sistema identifica y clasifica los colores que componen una imagen, proporcionando información detallada sobre la composición cromática de la misma."
+        },
+        {
+            "title": "Robot Race",
+            "place": "UPM",
+            "year": "2022",
+            "description": "Desarrollo de un robot autónomo diseñado para participar en una carrera de obstáculos, utilizando el entorno de simulación Webots y el sistema operativo de robots (ROS). Este proyecto combina habilidades de diseño mecánico, programación y control de robots, orientadas a la navegación autónoma y la superación de obstáculos en un entorno simulado."
+        },
+        {
+            "title": "TFG: ECCDH-AES128ctr",
+            "place": "UPM",
+            "year": "2024",
+            "description": "criptosistema avanzado implementado en una FPGA que combina el algoritmo de cifrado simétrico AES-128 y criptografía de curvas elípticas (ECC). Este proyecto fue realizado como parte del trabajo de fin de grado y tiene como objetivo explorar la eficiencia y seguridad de la criptografía moderna en hardware especializado."
+        }
+    ],
+    "webProjects": [
+        {
+            "title": "Página de Recetas",
+            "router": "/recipies",
+            "miniatureSrc": "/min-recipes.png", 
+            "year": "",
+            "place": "",
+            "description": "Web interactiva de recetas culinarias para descubrir, guardar y compartir sus recetas favoritas."
+        },
+        {
+            "title": "FE Quiz",
+            "router": "/quiz",
+            "miniatureSrc": "/min-quiz.png", 
+            "year": "",
+            "place": "", 
+            "description": "Quiz interactivo centrado en las características fundamentales de tecnologías de frontend como HTML, CSS y JavaScript. Este proyecto está diseñado para ayudar a los usuarios a evaluar y mejorar sus conocimientos sobre estas tecnologías clave, a través de una serie de preguntas dinámicas y desafiantes."
+        },
+        {
+            "title": "Password Manager",
+            "router": "/pwdManager",
+            "miniatureSrc": "/min-pwdmanager.png", 
+            "year": "",
+            "place": "", 
+            "description": "Gestor de contraseñas diseñado para generar, almacenar y gestionar contraseñas para diversas plataformas en un solo lugar.Este proyecto busca mejorar la seguridad digital de los usuarios, permitiéndoles crear contraseñas fuertes y únicas para cada cuenta, y guardarlas de manera segura."
+        },
+        {
+            "title": "FAQ",
+            "router": "/faq",
+            "miniatureSrc": "/min-faq.png", 
+            "year": "",
+            "place": "", 
+            "description": " Desarrollo de una sección de Preguntas Frecuentes (FAQ) en el portafolio personal, diseñada para proporcionar información rápida y clara sobre el perfil profesional, habilidades, experiencias y enfoques de trabajo."
+        }
+    ]
+}
