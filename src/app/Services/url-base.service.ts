@@ -8,18 +8,18 @@ export class UrlBaseService {
     private baseUrl: string = "";
     private baseApiUrl: string = "";
     private imgUrl: string = "";
+    private docUrl: string = "";
 
     constructor() {
         //If it neeeded, change here url base on platform (server/browser)
         this.baseUrl = environment.apiBaseUrl;
         if (environment.production) {
             this.baseApiUrl = this.baseUrl + "/assets/apiMocks";
-            this.imgUrl = this.baseUrl + "/assets/images";
         } else {
             this.baseApiUrl = this.baseUrl + "/api";
-            this.imgUrl = this.baseUrl + "/assets/images";
         }
-       
+        this.imgUrl = this.baseUrl + "/assets/images";
+        this.docUrl = this.baseUrl + "/assets/documents";
     }
 
     getBaseUrl() {
@@ -32,5 +32,9 @@ export class UrlBaseService {
 
     getImgUrl() {
         return this.imgUrl;
+    }
+
+    getDocUrl() {
+        return this.docUrl;
     }
 }
