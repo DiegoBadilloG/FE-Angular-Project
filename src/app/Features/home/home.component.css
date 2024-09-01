@@ -286,6 +286,11 @@
     }
 
     @media screen and (max-width: 1000px) {
+        .intro,  .experiencia, .proyectosWeb, 
+        .proyectos, .sobreMi, .tecnologias{
+            width: 80%;
+        }
+
         .tecnologias .tech-list, .webProj-content {
             display: flex;
             flex-wrap: wrap;
