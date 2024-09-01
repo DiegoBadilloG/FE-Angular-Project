@@ -1,5 +1,5 @@
 .main-content {
-    height: auto;
+    height: 100%;
     width: auto;
     background-color: rgb(13, 30, 66);
     display: flex;
@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 40%;
         padding-top: 10%;
         padding-bottom: 10%;
 
@@ -33,6 +33,7 @@
         .intro-social-media {
             display: flex;
             flex-wrap: wrap;
+
             gap: 20px;
         }
 
@@ -61,7 +62,7 @@
     .proyectos, .sobreMi, .tecnologias {
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 40%;
         padding-top: 30px;
         .title {
             color: white;
@@ -186,7 +187,7 @@
                 .proj-descrp:hover {
                     -webkit-line-clamp: unset; 
                     line-clamp: unset;
-                    max-height: 25em;
+                    max-height: calc(100%);
                     min-height: 8.6em;
                 }
             }
@@ -225,6 +226,7 @@
         .tech-list {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
 
             .front, .back, .hw, .learning, .tools {
                 padding-bottom: 40px;
@@ -260,7 +262,6 @@
                 flex-direction: column;
                 align-items: center;
                 padding-bottom: 15px;
-                padding-right: px;
 
                 img {
                     width: 50px;
@@ -284,6 +285,18 @@
        color: lightblue;
     }
 
+    @media screen and (max-width: 1000px) {
+        .tecnologias .tech-list, .webProj-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tecnologias .tech-list {
+            .front, .back, .hw, .learning, .tools {
+                padding-right: 0;
+            }
+        }
+    }
 }
 
 /* width */
