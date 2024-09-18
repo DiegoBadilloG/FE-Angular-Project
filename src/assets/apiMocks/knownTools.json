@@ -1,0 +1,39 @@
+{
+    "front": [
+        { "name": "HTML", "image": "/HTML5_logo_and_wordmark.png" },
+        { "name": "CSS", "image": "/CSS3_logo_and_wordmark.png" },
+        { "name": "JavaScript", "image": "/JavaScript-logo.png" },
+        { "name": "Angular", "image": "/Angular_full_color_logo.png" },
+        { "name": "AngularJS", "image": "/angular-icon.svg" },
+        { "name": "ExtJS", "image": "/imgbin-sencha-touch-ext-js-mobile-app-development-logo-android-WH3aJtZDTnKYpNUiLxiEs0EkW.png" },
+        { "name": "Tailwind", "image": "/512px-Tailwind_CSS_Logo.png" },
+        { "name": "Webpack", "image": "/webpack-icon.png" },
+        { "name": "Bootstrap", "image": "/256px-Bootstrap_logo.png" }
+    ],
+    "back": [
+        { "name": "Java", "image": "/java-icon.svg" },
+        { "name": "MariaDB", "image": "/https___mariadb.com_wp-content_uploads_2019_11_mariadb-logo-vertical_blue.svg" },
+        { "name": "Docker", "image": "/docker-svgrepo-com.svg" },
+        { "name": "python", "image": "/python-svgrepo-com.svg"}
+    ],
+    "hw": [
+        { "name": "C", "image": "/c-1.svg" },
+        { "name": "VHDL", "image": "/vhdl-svgrepo-com.svg" },
+        { "name": "Vivado", "image": "/vivado-logo.png" },
+        { "name": "Espressif", "image": "/espressif-systems.svg" }
+    ],
+    "learning": [
+        { "name": "JavaScript", "image": "/JavaScript-logo.png" },
+        { "name": "Angular", "image": "/Angular_full_color_logo.png" }
+    ],
+    "tools": [
+        { "name": "Git", "image": "/Git_icon.png" },
+        { "name": "GitHub", "image": "/github-icon-256x256-f4srpvey.png" },
+        { "name": "Terminal", "image": "/linux-terminal.png" },
+        { "name": "VSCode", "image": "/vscode-svgrepo-com.svg" },
+        { "name": "npm", "image": "/npm-svgrepo-com.svg" },
+        { "name": "Linux", "image": "/linux-logo.png" },
+        { "name": "Kali Linux", "image": "/kali-linux-logo.png" },
+        { "name": "Arduino IDE", "image": "/arduino-ide-logo.png" }
+    ]
+}

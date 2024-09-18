@@ -1,19 +1,130 @@
 <div class="main-content">
-    <div class="intro-content">
-        <p class="my-intro">
-            ¡Hola! Soy Diego, un entusiasta del mundo digital con una pasión recién descubierta por el desarrollo front-end. Mi viaje comenzó en el fascinante campo de la ingeniería de computadores, donde exploré las complejidades del hardware y las maravillas de la tecnología.
-    
-            <br><br>
-            ¡Hola! Soy Diego, un apasionado del desarrollo front-end. Mi trayectoria comenzó en la ingeniería de computadores, pero mi curiosidad me llevó al mundo del desarrollo web.
+    <section class="intro">
+        <div class="intro-texto">
+            <span style="font-size: 20px;">Hola, <span class="name">soy Diego Badillo</span></span>
+            <span class="profesion">Desarrollador FrontEnd</span>
+            <p style="width: 50%;"><br><span style="color: rgb(110, 217, 253);">+4  años de experiencia</span> relacionada con tecnologías de la información.
+            Ingeniero de Computadores y Desarrollador Web.
+            Especializado en el desarrollo front-end de soluciones web modernas y robustas</p>
+        </div>
+        <div class="intro-selfy">
+            <img src="">
+        </div>
+        <div class="intro-social-media">
+            <button (click)="navegateToUrl('linkeIn')">LinkedIn
+            </button>
+            <button (click)="navegateToUrl('gitHub')">GitHub</button>
+            <button>
+                <a>diegoabgomez&#64;gmail.com</a>
+            </button>
+            <button (click)="scrollToSection('projects')">Proyectos</button>
+        </div>
+    </section>
 
-            Desde mis primeras prácticas, he crecido como desarrollador front-end. Actualmente, estoy enfocando en mejorar mis habilidades y finalizar mi proyecto de fin de grado. Me motiva la posibilidad de aprender y crecer continuamente, explorando nuevas tecnologías y tendencias.
-            <br><br>
-            Mi objetivo es seguir ampliando mis habilidades, contribuir al éxito de equipos multidisciplinarios y, en última instancia, crear mis propios proyectos innovadores que impacten positivamente en el mundo digital.
-            <br><br>
-            ¡Acompáñame en este emocionante viaje mientras exploramos juntos el apasionante mundo del desarrollo front-end!
+    <section class="experiencia">
+        <div class="title">Experiencia</div>
+        <div class="exp-content">
+            <div *ngFor="let exp of expData" class="exp-elem">
+                <span class="exp-position">{{exp.position}}</span>
+                <span class="exp-company">{{exp.place}}</span>
+                <span class="exp-time">{{exp.year}}</span>
+                <span class="exp-descrp">{{exp.description}}</span>
+            </div>
+        </div>
+    </section>
 
-            <br><br><br>
-            ¡¡Ve a explorar la App!!
-        </p>
-    </div>
+    <section id="projects" class="proyectosWeb">
+        <div class="title">Proyectos Web</div>
+        <div class="info"></div>
+        <div class="webProj-content">
+            <div *ngFor="let web of webProjData" class="web-elem">
+                <button class="img-router" routerLink="{{web.router}}">
+                    <img src="{{imgUrl + web.miniatureSrc}}">
+                </button>
+                <span class="web-title">{{web.title}}</span>
+                <span class="web-descrp">{{web.description}}</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="proyectos">
+        <div class="title">Otros Proyectos</div>
+        <div class="proj-content">
+            <div *ngFor="let proj of projectsData" class="proj-elem">
+                <span class="proj-title">{{proj.title}}</span>
+                <span class="proj-place">{{proj.place}}</span>
+                <span class="proj-year">{{proj.year}}</span>
+                <span class="proj-descrp">{{proj.description}}</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobreMi">
+        <div class="title">
+            <span>Sobre Mí</span>
+        </div>
+        <div class="info">
+            <p>{{aboutMe}}</p>
+        </div>
+        <div class="curriculum">
+            <button id="cv-es" class="curriculum-btn" (click)="downloadCV('cv-es')">CV (ES) </button>
+            <button id="cv-en" class="curriculum-btn" (click)="downloadCV('cv-en')">CV (EN)</button>
+        </div>
+    </section>
+
+    <section class="tecnologias">
+        <div class="title">
+            <span>Tecnologías</span>
+        </div>
+        <div>
+            <p>Desde que me inicié en la programación he cultiva experiencias y habilidades en varias tecnologias. Mi stack en la industria incluye:</p>
+        </div>
+        <div class="tech-list">
+            <div class="front">
+                <span class="title">Front</span>
+                <div class="tech-list">
+                    <div *ngFor="let elem of front" class="tech-elem">
+                        <img src="{{imgUrl + elem.image}}">
+                        <span>{{elem.name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="back">
+                <span class="title">Back</span>
+                 <div class="tech-list">
+                    <div *ngFor="let elem of back" class="tech-elem">
+                        <img src="{{imgUrl + elem.image}}">
+                        <span>{{elem.name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hw">
+                <span class="title">Hardware</span>
+                 <div class="tech-list">
+                    <div *ngFor="let elem of hw" class="tech-elem">
+                        <img src="{{imgUrl + elem.image}}">
+                        <span>{{elem.name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="learning">
+                <span class="title">Aprendiendo</span>
+                 <div class="tech-list">
+                    <div *ngFor="let elem of learning" class="tech-elem">
+                        <img src="{{imgUrl + elem.image}}">
+                        <span>{{elem.name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tools">
+                <span class="title">Herramientas</span>
+                 <div class="tech-list">
+                    <div *ngFor="let elem of tools" class="tech-elem">
+                        <img src="{{imgUrl + elem.image}}">
+                        <span>{{elem.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
