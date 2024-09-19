@@ -1,0 +1,226 @@
+.container {
+    height: auto;
+    width: inherit;
+    background-color:  white;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+
+    .eshop-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .main-menu {
+            display: flex;
+            gap: 5px;
+        }
+
+        .aux-menu {
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+            flex: 1;
+            justify-content: end;
+
+            .search-bar {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgb(232, 232, 232);
+                height: fit-content;
+                border-radius: 30px;
+
+                .search-input {
+                   background-color: transparent;
+                    border: none;
+                    height: 25px;
+                    outline: none;
+                }            
+            }
+            .search-bar:focus-within {
+                outline: 1px solid black;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            padding-top: 0px;
+            align-items: baseline;
+            padding-left: 10px;
+            padding-right: 10px;
+            .aux-menu {
+                gap: 0px;
+            }
+        }
+    }
+
+    .shoes-menu, .man-menu,
+    .woman-menu, .kid-menu,
+    .new-menu, .sport-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        width: 100%;
+        position: absolute;
+        top: 13.25%;
+        z-index: 1000;
+        background-color: white;
+        padding: 15px;
+
+        .lk-group1 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bold-links {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .main-banner {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(90, 186, 255, 0.7);
+        padding: 20px;
+        background-blend-mode: multiply;
+        width: inherit;
+        flex-grow: 1;
+
+        .carousel-img {
+            width: 100%;
+            img {
+                width: inherit;
+                height: inherit;
+                border-radius: 15px;
+            }
+
+            .banner-btn-actions {
+                display: flex;
+                gap: 10px;
+                position: relative;
+                top: -15%;
+                padding-left: 25px;
+
+                .banner-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: white;
+                    border-radius: 3px;
+                    box-shadow: 3px 3px black;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .banner-btn-actions {
+                    position: relative;
+                    top: 0px;
+                    padding: 15px 0px 15px 0px;
+                }
+            }
+        }
+
+        .banner-info-item {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap:10px;
+            color: white;
+            text-align: center;
+            font-size: 150%;
+            padding: 15px 15px 0px 15px;
+        }
+    }
+
+    .showcase-area {
+        height: 500px; /* quitar */
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+
+        .new-next-seller-btn {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            button {
+                height: 35px;
+                background-color: white;
+                border: 1px solid black;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+            button:hover, .active {
+                background-color: black;
+                color: white;
+            }
+        }
+
+        .news-slider {
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            overflow-x: scroll;
+            scrollbar-width: thin;
+        }
+
+        .products-slider, .news-slider {
+            height: fit-content;
+            padding-top: 15px;
+            .slider-elem {
+                display: flex;
+                flex-direction: column;
+                width: 170px;
+                cursor: pointer;
+
+                .elem-img {
+                    height: 130px;
+                    width: inherit;
+                    object-fit: cover;
+                }
+                .elem-price {
+                    position: relative;
+                    top: -120px;
+                    left: 120px;
+                }
+                .elem-footer {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    button.eshop-main-btn,
+    button.banner-btn {
+        font-family: sans-serif;
+        font-size: 14px;
+        background-color: transparent;
+        border: none;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    button.eshop-main-btn:hover {
+        border-bottom: 5px solid black;
+    }
+}

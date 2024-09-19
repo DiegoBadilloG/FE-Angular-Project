@@ -1,0 +1,249 @@
+<div class="container">
+    <!-- inspirado en adidas.es -->
+
+    <!-- barra de navegacion -->
+    <nav class="eshop-nav">
+        <div class="eshop-logo"></div>
+
+        <div class="main-menu">
+            <button (mouseover)="showElem('shoes')" (mouseleave)="hiddenElem('shoes')" class="eshop-main-btn">Zapatillas</button>
+            <button (mouseover)="showElem('man')" (mouseleave)="hiddenElem('man')" class="eshop-main-btn">Hombre</button>
+            <button (mouseover)="showElem('woman')" (mouseleave)="hiddenElem('woman')" class="eshop-main-btn">Mujer</button>
+            <button (mouseover)="showElem('kid')" (mouseleave)="hiddenElem('kid')" class="eshop-main-btn">Niño</button>
+            <button class="eshop-main-btn">Novedades</button>
+            <button class="eshop-main-btn">Deportes</button>
+        </div>
+
+        <div class="aux-menu">
+            <div class="search-bar">
+                <input class="search-input" placeholder="Buscar">
+                <button mat-button class="search-btn">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </div>
+
+            <button mat-button>
+                <mat-icon>person</mat-icon>
+            </button>
+            <button mat-button>
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-button>
+                <mat-icon>local_mall</mat-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- desplegable sobre seccion zapatillas -->
+    <div *ngIf="displayShoes" (mouseover)="showElem('shoes')" (mouseout)="hiddenElem('shoes')" class="shoes-menu">
+        <div class="lk-group1">
+            <a class="bold-links" href="">Todas las Zapatillas</a>
+            <a class="bold-links" href="">Comprar por deportes</a>
+            <a href="">Fútbol</a>
+            <a href="">Outdoor y senderismo</a>
+            <a href="">Runnig</a>
+            <a href="">Caminatas</a>
+            <a href="">Tenis</a>
+            <a href="">Gimnasio y training</a>
+        </div>
+    </div>
+
+    <!-- desplegable sobre seccion hombres -->
+    <div *ngIf="displayMan" (mouseover)="showElem('man')" (mouseout)="hiddenElem('man')" class="man-menu">    
+        <div class="lk-group1">
+            <a class="bold-links" href="">Novedades y tendendias</a>
+            <a href="">Novedades</a>
+            <a href="">Fechas de lanzamiento</a>
+            <a href="">Solo en NombreTienda</a>
+            <a href="">Tendencias</a>
+            <a href="">Eventos deportivos</a>
+            <a href="">Productos presonalizables</a>
+            <a href="">Pride</a>
+            <a href="">Disfruta del verano</a>
+            <a href="">Ready to school</a>
+            <a href="">Outlet</a>
+        </div>
+    </div>
+
+    <!-- desplegable sobre seccion mujer -->
+    <div *ngIf="displayWoman" (mouseover)="showElem('woman')" (mouseout)="hiddenElem('woman')" class="woman-menu">    
+        <div class="lk-group1">
+            <a class="bold-links" href="">Novedades y tendendias</a>
+            <a href="">Novedades</a>
+            <a href="">Fechas de lanzamiento</a>
+            <a href="">Solo en NombreTienda</a>
+            <a href="">Tendencias</a>
+            <a href="">Eventos deportivos</a>
+            <a href="">Productos presonalizables</a>
+            <a href="">Pride</a>
+            <a href="">Disfruta del verano</a>
+            <a href="">Ready to school</a>
+            <a href="">Outlet</a>
+        </div>
+        <div class="lk-group1">
+            <a class="bold-links" href="">Ropa</a>
+            <a href="">Camisetas y tops</a>
+            <a href="">Pantalones cortos</a>
+            <a href="">Pantalones de chándal</a>
+            <a href="">Mallas</a>
+            <a href="">Chaquestas y sudaderas con capucha</a>
+            <a href="">Chándales</a>
+            <a href="">Faldas y vestidos</a>
+            <a href="">Ropa de baño</a>
+            <a href="">Sudaderas</a>
+            <a href="">Sujetadores deportivos</a>
+            <a href="">Pantalones</a>
+            <a href="">Chaquetas</a>
+            <a href="">Tallas grandes</a>
+        </div>
+    </div>
+
+    <!-- desplegable sobre seccion niño -->
+    <div *ngIf="displayKid" (mouseover)="showElem('kid')" (mouseout)="hiddenElem('kid')" class="kid-menu">    
+        <div class="lk-group1">
+            <a class="bold-links" href="">Novedades y tendendias</a>
+            <a href="">Novedades</a>
+            <a href="">Fechas de lanzamiento</a>
+            <a href="">Solo en NombreTienda</a>
+            <a href="">Tendencias</a>
+            <a href="">Eventos deportivos</a>
+            <a href="">Productos presonalizables</a>
+            <a href="">Pride</a>
+            <a href="">Disfruta del verano</a>
+            <a href="">Ready to school</a>
+            <a href="">Outlet</a>
+        </div>
+        <div class="lk-group1">
+            <a class="bold-links" href="">Zapatillas chico</a>
+            <a href="">Chanclas y sandalias</a>
+            <a href="">Fútbol</a>
+            <a href="">Gimnasio y training</a>
+            <a href="">Outdoor</a>
+
+            <a class="bold-links" href="">Zapatillas chica</a>
+            <a href="">Chanclas y sandalias</a>
+            <a href="">Fútbol</a>
+            <a href="">Gimnasio y training</a>
+            <a href="">Outdoor</a>
+        </div>
+        <div class="lk-group1">
+            <a class="bold-links" href="">Ropa chico</a>
+            <a href="">Chándal</a>
+            <a href="">Completar series</a>
+            <a href="">Camisetas</a>
+            <a href="">Pantalones Cortos</a>
+            <a href="">Pantalones</a>
+            <a href="">Chaquetas y sudaderas con capucha</a>
+            <a href="">Sudaderas</a>
+            <a href="">Chaquetas</a>
+            <a href="">Camisetas de fútbol</a>
+
+            <a class="bold-links" href="">Ropa chica</a>
+            <a href="">Chándal</a>
+            <a href="">Completar series</a>
+            <a href="">Camisetas</a>
+            <a href="">Pantalones Cortos</a>
+            <a href="">Pantalones</a>
+            <a href="">Chaquetas y sudaderas con capucha</a>
+            <a href="">Sudaderas</a>
+            <a href="">Chaquetas</a>
+            <a href="">Camisetas de fútbol</a>
+        </div>
+    </div>
+    
+    <!-- banner principal/ anuncio -->
+    <div class="main-banner">
+        <div class="carousel-img">
+            <img class="banner-img" src="{{imgRoute}}/asos-glaad-proud-together.jpg">
+
+            <div class="banner-btn-actions">
+                <button class="banner-btn" href="">
+                    Comprar
+                    <img style="height: 20px; width: 20px; color: black;" src="{{imgRoute}}/trending_flat_24dp_000000_FILL0_wght400_GRAD0_opsz24.png">
+                </button>
+                <button class="banner-btn">
+                    Descubrir
+                    <img style="height: 20px; width: 20px; color: black;" src="{{imgRoute}}/trending_flat_24dp_000000_FILL0_wght400_GRAD0_opsz24.png">
+                </button>
+            </div>
+        </div>
+        
+        <div class="banner-info-item">
+            <span>Alguna info del producto</span>
+            <span>Ejemplo: Desde 49,99€</span>
+        </div>
+
+    </div>
+
+    <div class="">
+        <!-- distintos productos -->
+    </div>
+
+    <div class="showcase-area">
+        <!-- novedades, mas vendido, priximamente -->
+        <div class="new-next-seller-btn">
+            <button id="newBtn" (click)="toggleSliderBtn('newBtn', 'newBtn')">Novedades</button>
+            <button id="bestBtn" (click)="toggleSliderBtn('bestBtn', 'bestBtn')">Lo mejor</button>
+            <button id="soonBtn" (click)="toggleSliderBtn('soonBtn', 'soonBtn')">Próximamente</button>
+        </div>
+
+        <!-- novedades slider -->
+        <div class="news-slider" *ngIf="newBtn">
+            <div class="slider-elem" *ngFor="let elem of newElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
+                <div class="elem-footer">
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- lo mejor slider -->
+        <div class="news-slider" *ngIf="bestBtn">
+            <div class="slider-elem" *ngFor="let elem of bestElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
+                <div class="elem-footer">
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- proximamente slider -->
+        <div class="news-slider" *ngIf="soonBtn">
+            <div class="slider-elem" *ngFor="let elem of soonElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
+                <div class="elem-footer">
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
+                </div>
+            </div>
+
+            <div style="display: flex;  flex-direction: column; padding-left: 20%;">
+                <span>Ups!! Nada nuevo por ahora</span>
+                <img style="width: 200px;" src="{{imgRoute}}/nothingNew.png">  
+                <!-- <span>Ups!! Nada nuevo por ahora</span>  --> 
+            </div>
+            
+        </div>
+
+        <!-- slider para productos genericos -->
+        <div class="products-slider">
+            <div class="slider-elem" *ngFor="let elem of sldElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
+                <div class="elem-footer">
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- blogs de moda -->
+    </div>
+</div>
