@@ -6,8 +6,8 @@
         <div class="eshop-logo"></div>
 
         <div class="main-menu">
-            <button (mouseover)="showElem('shoes')" (mouseout)="hiddenElem('shoes')" class="eshop-main-btn">Zapatillas</button>
-            <button (mouseover)="showElem('man')" (mouseout)="hiddenElem('man')" class="eshop-main-btn">Hombre</button>
+            <button (mouseover)="showElem('shoes')" (mouseleave)="hiddenElem('shoes')" class="eshop-main-btn">Zapatillas</button>
+            <button (mouseover)="showElem('man')" (mouseleave)="hiddenElem('man')" class="eshop-main-btn">Hombre</button>
             <button (mouseover)="showElem('woman')" (mouseleave)="hiddenElem('woman')" class="eshop-main-btn">Mujer</button>
             <button (mouseover)="showElem('kid')" (mouseleave)="hiddenElem('kid')" class="eshop-main-btn">Niño</button>
             <button class="eshop-main-btn">Novedades</button>
@@ -182,18 +182,62 @@
     <div class="showcase-area">
         <!-- novedades, mas vendido, priximamente -->
         <div class="new-next-seller-btn">
-            <button>Novedades</button>
-            <button>Lo mejor</button>
-            <button>Próximamente</button>
+            <button id="newBtn" (click)="toggleSliderBtn('newBtn', 'newBtn')">Novedades</button>
+            <button id="bestBtn" (click)="toggleSliderBtn('bestBtn', 'bestBtn')">Lo mejor</button>
+            <button id="soonBtn" (click)="toggleSliderBtn('soonBtn', 'soonBtn')">Próximamente</button>
         </div>
 
-        <div class="products-slider">
-            <div class="slider-elem">
-                <img style="width: 100px;" src="{{imgRoute}}/NIKE+AIR+FORCE+1+'07.png">
-                <span class="elem-price">€ 70</span>
+        <!-- novedades slider -->
+        <div class="news-slider" *ngIf="newBtn">
+            <div class="slider-elem" *ngFor="let elem of newElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
                 <div class="elem-footer">
-                    <span>>apatillas SL Adolescente</span>
-                    <span>Originals</span>
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- lo mejor slider -->
+        <div class="news-slider" *ngIf="bestBtn">
+            <div class="slider-elem" *ngFor="let elem of bestElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
+                <div class="elem-footer">
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- proximamente slider -->
+        <div class="news-slider" *ngIf="soonBtn">
+            <div class="slider-elem" *ngFor="let elem of soonElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
+                <div class="elem-footer">
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
+                </div>
+            </div>
+
+            <div style="display: flex;  flex-direction: column; padding-left: 20%;">
+                <span>Ups!! Nada nuevo por ahora</span>
+                <img style="width: 200px;" src="{{imgRoute}}/nothingNew.png">  
+                <!-- <span>Ups!! Nada nuevo por ahora</span>  --> 
+            </div>
+            
+        </div>
+
+        <!-- slider para productos genericos -->
+        <div class="products-slider">
+            <div class="slider-elem" *ngFor="let elem of sldElems">
+                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                <span class="elem-price">{{elem.price}}</span>
+                <div class="elem-footer">
+                    <span>{{elem.name}}</span>
+                    <span>{{elem.brand}}</span>
                 </div>
             </div>
         </div>

@@ -1,11 +1,12 @@
 .container {
     height: auto;
-    width: auto;
+    width: inherit;
     background-color:  white;
     display: flex;
     flex-direction: column;
     flex: 1;
     overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
 
     .eshop-nav {
@@ -33,6 +34,7 @@
                 align-items: center;
                 background-color: rgb(232, 232, 232);
                 height: fit-content;
+                border-radius: 30px;
 
                 .search-input {
                    background-color: transparent;
@@ -43,7 +45,7 @@
             }
             .search-bar:focus-within {
                 outline: 1px solid black;
-            } 
+            }
         }
 
         @media screen and (max-width: 600px) {
@@ -52,6 +54,9 @@
             align-items: baseline;
             padding-left: 10px;
             padding-right: 10px;
+            .aux-menu {
+                gap: 0px;
+            }
         }
     }
 
@@ -63,8 +68,8 @@
         gap: 30px;
         width: 100%;
         position: absolute;
+        top: 13.25%;
         z-index: 1000;
-        top: 13.2%;
         background-color: white;
         padding: 15px;
 
@@ -92,8 +97,11 @@
     .main-banner {
         display: flex;
         flex-direction: row;
-        background-color: rgb(90, 186, 255);
+        background-color: rgba(90, 186, 255, 0.7);
         padding: 20px;
+        background-blend-mode: multiply;
+        width: inherit;
+        flex-grow: 1;
 
         .carousel-img {
             width: 100%;
@@ -118,35 +126,88 @@
                     border-radius: 3px;
                     box-shadow: 3px 3px black;
                 }
-                
+            }
+
+            @media screen and (max-width: 600px) {
+                .banner-btn-actions {
+                    position: relative;
+                    top: 0px;
+                    padding: 15px 0px 15px 0px;
+                }
             }
         }
 
         .banner-info-item {
             display: flex;
             flex-direction: column;
-            gap:10px;
             width: 100%;
-            justify-content: center;
+            gap:10px;
             color: white;
-            font-size: 30px;
-            padding: 30px;
+            text-align: center;
+            font-size: 150%;
+            padding: 15px 15px 0px 15px;
         }
     }
 
     .showcase-area {
-        height: 600px; /* quitar */
-        background-color: beige;
+        height: 500px; /* quitar */
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
 
-        .products-slider {
-            height: 300px;
+        .new-next-seller-btn {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            button {
+                height: 35px;
+                background-color: white;
+                border: 1px solid black;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+            button:hover, .active {
+                background-color: black;
+                color: white;
+            }
+        }
+
+        .news-slider {
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            overflow-x: scroll;
+            scrollbar-width: thin;
+        }
+
+        .products-slider, .news-slider {
+            height: fit-content;
+            padding-top: 15px;
             .slider-elem {
+                display: flex;
+                flex-direction: column;
+                width: 170px;
+                cursor: pointer;
+
                 .elem-img {
-                    height: inherit;
+                    height: 130px;
+                    width: inherit;
+                    object-fit: cover;
+                }
+                .elem-price {
+                    position: relative;
+                    top: -120px;
+                    left: 120px;
+                }
+                .elem-footer {
+                    display: flex;
+                    flex-direction: column;
                 }
             }
         }
-        
     }
 
     button.eshop-main-btn,
