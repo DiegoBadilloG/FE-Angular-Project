@@ -9,10 +9,34 @@
         ],
         "sliderElems": [
             {
+                "src": "N31+MNK+CLUB+HDY+PO.png",
+                "name": "Sudadera Team 31 Club",
+                "brand": "Nike",
+                "price": "€49"
+            },
+            {
                 "src": "NIKE+AIR+FORCE+1+'07.png",
                 "name": "Zapatillas SL Adolescente",
                 "brand": "Originals Adidas",
                 "price": "€70"
+            },
+            {
+                "src": "LAL+MNK+CLUB+HDY+PO+N&N+CE.png",
+                "name": "Sudadera LeBron James Los Angeles Lakers Club Fleece City Edition",
+                "brand": "Nike",
+                "price": "€45"
+            },
+            {
+                "src": "M+NK+TCH+FLC+TAILORED+PANT+RI.png",
+                "name": "Pantalón entallado de tejido Fleece",
+                "brand": "Nike",
+                "price": "€135"
+            },
+            {
+                "src": "M+J+SPRT+JAM+WARM+UP+PANT.png",
+                "name": "Pantalón Jordan Sport Jam",
+                "brand": "Nike",
+                "price": "€65"
             }
         ],
         "newElems": [
