@@ -232,12 +232,17 @@
 
         <!-- slider para productos genericos -->
         <div class="products-slider">
-            <div class="slider-elem" *ngFor="let elem of sldElems">
-                <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
-                <span class="elem-price">{{elem.price}}</span>
-                <div class="elem-footer">
-                    <span>{{elem.name}}</span>
-                    <span>{{elem.brand}}</span>
+            <div class="title">
+                <span>Outlet</span>
+            </div>
+            <div class="products">
+                <div class="slider-elem" *ngFor="let elem of sldElems">
+                    <img class="elem-img" src="{{imgRoute}}/{{elem.src}}">
+                    <span class="elem-price">{{elem.price}}</span>
+                    <div class="elem-footer">
+                        <span>{{elem.name}}</span>
+                        <span>{{elem.brand}}</span>
+                    </div>
                 </div>
             </div>
         </div>
