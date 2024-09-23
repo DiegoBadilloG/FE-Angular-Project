@@ -1,12 +1,11 @@
 .container {
     height: auto;
-    width: inherit;
+    width: auto;
     background-color:  white;
     display: flex;
     flex-direction: column;
-    flex: 1;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: auto;
     scrollbar-width: none;
 
     .eshop-nav {
@@ -56,6 +55,9 @@
             padding-right: 10px;
             .aux-menu {
                 gap: 0px;
+                .search-bar .search-input {
+                    width: 130px;
+                }
             }
         }
     }
@@ -141,18 +143,26 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            gap:10px;
+            gap: 20px;
             color: white;
-            text-align: center;
-            font-size: 150%;
-            padding: 15px 15px 0px 15px;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-size: 40px;
+            }
+            @media screen and (max-width: 600px) {
+                span {
+                    font-size: 20px;
+                }
+            }
         }
     }
 
     .showcase-area {
-        height: 500px; /* quitar */
         background-color: rgb(255, 255, 255);
         width: 100%;
+        box-sizing: border-box;
         padding: 15px;
         display: flex;
         flex-direction: column;
@@ -174,18 +184,26 @@
             }
         }
 
-        .news-slider {
-            padding-bottom: 100px;
+        .news-slider, .products{
+            padding-top: 15px;
             display: flex;
             flex-direction: row;
             gap: 60px;
-            overflow-x: scroll;
-            scrollbar-width: thin;
+            overflow-x: auto;
+            padding-bottom: 30px;
+        }
+
+        .products-slider {
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            .title {
+                font-size: 20px;
+                font-weight: bold;
+            }
         }
 
         .products-slider, .news-slider {
-            height: fit-content;
-            padding-top: 15px;
             .slider-elem {
                 display: flex;
                 flex-direction: column;
@@ -223,4 +241,5 @@
     button.eshop-main-btn:hover {
         border-bottom: 5px solid black;
     }
+
 }
