@@ -171,27 +171,28 @@
                     color:rgb(186, 224, 237);
                     font-size: 15px;
                 }
-        
-                .proj-descrp {
-                    color: white;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    line-clamp: 3;
-                    text-overflow: ellipsis;
-                    max-height: 4.5em;
-                    min-height: 4.5em;
-                    transition: max-height 1s ease, min-height 1s ease;
-                }
-                .proj-descrp:hover {
-                    -webkit-line-clamp: unset; 
-                    line-clamp: unset;
-                    max-height: calc(100%);
-                    min-height: 8.6em;
-                }
             }
         }
+    }
+
+    .proj-descrp, .web-descrp {
+        color: white;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        text-overflow: ellipsis;
+        height: auto;
+        max-height: 4rem;
+        min-height: 3rem;
+        transition:  max-height 1s ease-in-out, min-height 1s ease-out;
+    }
+    .proj-descrp:hover, .web-descrp:hover {
+        -webkit-line-clamp: unset; 
+        line-clamp: unset;
+        max-height: 40rem;
+        min-height: 7.5rem;
     }
 
     .sobreMi {
