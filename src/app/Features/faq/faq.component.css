@@ -1,15 +1,18 @@
 .content {
-    height: 85vh;
+    min-height: 85vh;
+    height: auto;
     width: auto;
     background-color:  #faedcd;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
 
     .faq-card {
         display: flex;
         flex-direction: column;
-        width: 600px;
-        margin: 15PX;
+        width: 50%;
+        height: min-content;
+        margin: 15px;
 
         .faq-card-header {
             display: flex;
@@ -20,13 +23,21 @@
         .faq-content {
             display: flex;
             overflow: auto;
-            margin-bottom: 15px;
 
             .accordion {
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 5px;
+                justify-content: center;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                text-overflow: ellipsis;
             }
+        }
+
+        @media screen and (max-width: 600px) {
+            width: auto;
+            box-sizing: border-box;
         }
     }
     

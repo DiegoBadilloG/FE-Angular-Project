@@ -45,12 +45,12 @@
     ],
     "webProjects": [
         {
-            "title": "Página de Recetas",
-            "router": "/recipies",
-            "miniatureSrc": "/min-recipes.png", 
+            "title": "Tienda web",
+            "router": "/eCommercial",
+            "miniatureSrc": "/eshopSection.png", 
             "year": "",
             "place": "",
-            "description": "Web interactiva de recetas culinarias para descubrir, guardar y compartir sus recetas favoritas."
+            "description": "sección de tienda enfocada en la maquetación, inspirada en los sitios web de Nike y Adidas, diseñada para ofrecer una experiencia fluida tanto en web como en dispositivos móviles."
         },
         {
             "title": "FE Quiz",
@@ -59,6 +59,14 @@
             "year": "",
             "place": "", 
             "description": "Quiz interactivo centrado en las características fundamentales de tecnologías de frontend como HTML, CSS y JavaScript. Este proyecto está diseñado para ayudar a los usuarios a evaluar y mejorar sus conocimientos sobre estas tecnologías clave, a través de una serie de preguntas dinámicas y desafiantes."
+        },
+        {
+            "title": "Página de Recetas",
+            "router": "/recipies",
+            "miniatureSrc": "/min-recipes.png", 
+            "year": "",
+            "place": "",
+            "description": "Web interactiva de recetas culinarias para descubrir, guardar y compartir sus recetas favoritas."
         },
         {
             "title": "Password Manager",
