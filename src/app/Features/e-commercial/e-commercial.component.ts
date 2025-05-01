@@ -58,7 +58,7 @@ export class ECommercialComponent implements OnInit {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      alert("Página en construcción. Algunas funcionalidades pueden no estar disponibles. ¡Gracias por tu comprensión!");
+      //alert("Página en construcción. Algunas funcionalidades pueden no estar disponibles. ¡Gracias por tu comprensión!");
       let selectedBtn = document.getElementById('newBtn');
       if (selectedBtn) {
         selectedBtn.classList.add('active');

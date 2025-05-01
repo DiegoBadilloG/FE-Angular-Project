@@ -11,7 +11,8 @@
         { "name": "Bootstrap", "image": "/256px-Bootstrap_logo.png" }
     ],
     "back": [
-        { "name": "Java", "image": "/java-icon.svg" },
+        { "name": ".NET", "image": "/Microsoft_NET_logo.png" },
+        { "name": "AspNet", "image": "/ASP.NET_.png"},
         { "name": "MariaDB", "image": "/https___mariadb.com_wp-content_uploads_2019_11_mariadb-logo-vertical_blue.svg" },
         { "name": "Docker", "image": "/docker-svgrepo-com.svg" },
         { "name": "python", "image": "/python-svgrepo-com.svg"}
@@ -32,8 +33,7 @@
         { "name": "Terminal", "image": "/linux-terminal.png" },
         { "name": "VSCode", "image": "/vscode-svgrepo-com.svg" },
         { "name": "npm", "image": "/npm-svgrepo-com.svg" },
-        { "name": "Linux", "image": "/linux-logo.png" },
-        { "name": "Kali Linux", "image": "/kali-linux-logo.png" },
-        { "name": "Arduino IDE", "image": "/arduino-ide-logo.png" }
+        { "name": "Jenkins", "image": "/Jenkins_logo.png" },
+        { "name": "SonarQube", "image": "/sonarqueb_logo.png" }
     ]
 }

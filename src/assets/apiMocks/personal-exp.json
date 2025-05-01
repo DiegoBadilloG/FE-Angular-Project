@@ -4,13 +4,19 @@
       "position": "Junior Front End Developer",
       "place": "UST GLOBAL SPAIN at TELEFÓNICA TECH",
       "year": "Marzo 2023 - Mayo 2024",
-      "description": "Colaboré en el desarrollo de componentes web utilizando Angular y AngularJS. Mantenimiento del sitio web y de la aplicación web. Participación activa en el proceso de migración a Angular. Creación de pruebas unitarias y en la optimización del rendimiento de la aplicación"
+      "description": "### Desarrollo y migración de aplicaciones web con Angular\n\n- Colaboré en el desarrollo de componentes web utilizando **Angular** y **AngularJS**.\n- Realicé tareas de mantenimiento tanto del sitio web como de la aplicación web.\n- Participé activamente en el proceso de **migración a Angular**.\n- Contribuí en la **creación de pruebas unitarias**.\n- Trabajé en la **optimización del rendimiento** de la aplicación."
     },
     {
       "position": "Aprendizaje autónomo",
       "place": "Autónomo",
       "year": "Mayo 2024 - Presente",
-      "description": "Estoy mejorando mis habilidades en Angular y JavaScript, enfocándome en el desarrollo de aplicaciones web modernas y en la implementación de buenas prácticas de programación. Estoy explorando técnicas avanzadas para optimizar el rendimiento y mejorar la experiencia del usuario."
-  }
+      "description": "### Mejora continua en Angular y JavaScript\n\nActualmente estoy fortaleciendo mis habilidades en **Angular** y **JavaScript**, con un enfoque en:\n\n- Desarrollo de aplicaciones web modernas.\n- Implementación de buenas prácticas de programación.\n- Exploración de técnicas avanzadas para:\n  - Optimizar el rendimiento.\n  - Mejorar la experiencia del usuario."
+    },
+    {
+      "position": "Desarrollador Full Stack",
+      "place": "Exceltic",
+      "year": "Octubre 2024 - Presente",
+      "description": "### Desarrollador Principal - Panel de Administración Empresarial\n\nResponsable del diseño, implementación y mantenimiento del nuevo panel de la empresa, utilizando **Angular 17**, **.NET 8** y **SQL Server**. Mis responsabilidades incluyen:\n\n---\n\n#### 🧩 Desarrollo Full Stack y Arquitectura\n\n- Diseñé e implementé un sistema de autenticación robusto con .NET, incluyendo una infraestructura completa de **JWT y refresh tokens** para garantizar la seguridad de acceso.\n- Desarrollé desde cero la interfaz de usuario del panel administrativo, implementando un diseño **modular y escalable** con Angular 17.\n- Creé un sistema completo de **tematización con múltiples opciones visuales**, incluyendo **modo oscuro**, mejorando significativamente la experiencia de usuario.\n\n---\n\n#### 🤖 Integración IA y Funcionalidades Avanzadas\n\n- Colaboré en la implementación de un **chatbot inteligente**, desarrollando tanto la interfaz de usuario con **RxJS** para comunicación en tiempo real, como componentes backend en **Python** para procesamiento y almacenamiento de datos.\n- Implementé módulos críticos de negocio como el **sistema de facturación**, con **visualizaciones dinámicas de datos** y herramientas de administración.\n\n---\n\n#### 🔧 DevOps y Optimización\n\n- Lideré la configuración de la pipeline **CI/CD** utilizando **Jenkins**, implementando análisis de código con **SonarQube** y containerización con **Docker** para automatizar completamente los despliegues.\n- Implementé estrategias de **diseño responsivo**, garantizando una experiencia óptima tanto en dispositivos de escritorio como móviles.\n\n---\n\n#### 🤝 Colaboración y Gestión de Proyectos\n\n- Administré herramientas de gestión de proyectos como **Redmine** para coordinar tareas, establecer prioridades y asegurar entregas puntuales.\n- Contribuí activamente al mantenimiento y mejora del código **legacy en ASP.NET**, implementando nuevas funcionalidades mientras mantenía la compatibilidad con sistemas existentes."
+    }
   ]
 }

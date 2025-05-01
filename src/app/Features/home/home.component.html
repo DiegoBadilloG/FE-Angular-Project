@@ -28,13 +28,13 @@
                 <span class="exp-position">{{exp.position}}</span>
                 <span class="exp-company">{{exp.place}}</span>
                 <span class="exp-time">{{exp.year}}</span>
-                <span class="exp-descrp">{{exp.description}}</span>
+                <span class="exp-descrp" [innerHTML]="exp.description | htmlSanitize"></span>
             </div>
         </div>
     </section>
 
     <section id="projects" class="proyectosWeb">
-        <div class="title">Proyectos Web</div>
+        <div class="title">Mis Proyectos Web Iniciales</div>
         <div class="info"></div>
         <div class="webProj-content">
             <div *ngFor="let web of webProjData" class="web-elem">

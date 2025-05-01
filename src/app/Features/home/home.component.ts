@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-
+import { Converter } from 'showdown';
+import { HtmlSanitizePipe } from '../../Pipes/htmlSanitize/html-sanitize.pipe';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    HtmlSanitizePipe
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -28,6 +30,7 @@ export class HomeComponent {
   private fullExpUrl: string = "";
   private fullProjectsUrl: string = "";
   private fullKnowladgeUrl: string = "";
+  private showdown: Converter = new Converter();
 
   linkeIn: string = "https://www.linkedin.com/in/diego-andres-b-b21405123/";
   gitHub: string = "https://github.com/DiegoBadilloG";
@@ -56,7 +59,10 @@ export class HomeComponent {
     this.fullProjectsUrl = this.urlService.getApiUrl() + this.ProjectsUrl;
     this.httpService.get(this.fullExpUrl).subscribe((data: any) => {
       this.expData = data.experience;
-      this.expData.sort((elem1: any, elem2: any) =>elem2.year - elem1.year)
+      this.expData.forEach((element: any) => {
+        element.description = this.showdown.makeHtml(element.description);
+      });
+      this.expData.sort((elem1: any, elem2: any) =>elem2.year - elem1.year);
     });
 
     this.httpService.get(this.fullProjectsUrl).subscribe((data: any) => {
